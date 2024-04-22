@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url('static/background-image.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Georgia, serif; /* Changed font family */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 30px; /* Increased padding */
+            background-color: #f5e781; /* Changed background color */
+            border-radius: 30px; /* Decreased border radius */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Changed box shadow */
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e1e1e; /* Changed title color */
+            margin-bottom: 30px; /* Increased margin bottom */
+            text-transform: uppercase; /* Added text transform */
+            letter-spacing: 2px; /* Added letter spacing */
+            font-size: 28px; /* Increased font size */
+        }
+
+        p {
+            color: #333; /* Changed paragraph color */
+            font-size: 18px; /* Increased font size */
+            margin-bottom: 30px; /* Increased margin bottom */
+        }
+
+        img {
+            width: 80%; /* Decreased image width */
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px; /* Increased border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Changed box shadow */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diameter Calculation Result</h1>
+        <p>Diameter of circle: {{ diameter }} cm</p>
+        <img src="{{ url_for('static', filename='uploads/result_image.jpg') }}" alt="Result Image">
+    </div>
+</body>
+</html>
